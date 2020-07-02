@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const {user} = require('app')
+var user = {username: "Tobias", password: "12345"};
 
 router.get('/', (req, res, next) => {
     res.render('login');
 });
 
 router.post('/', function(req, res, next) {
+    console.log(req.body);
     if(req.body.username != user.username)
         return res.send({error: 'username not found'});
     if(req.body.password != user.password)

@@ -1,0 +1,21 @@
+.info {
+    position: absolute;
+    width: 484px;
+    height: 200px;
+    left: 933px;
+    top: 291px;
+    background: #BFDAF3;
+
+    padding: 23px;
+}
+
+.text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+
+}
