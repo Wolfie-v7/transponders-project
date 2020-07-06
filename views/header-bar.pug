@@ -2,5 +2,16 @@ extends layout
 
 block content
     link(rel='stylesheet', href='/stylesheets/header-bar.css')
-    div(class="bar")
-        img(src="/images/TH_Koeln_Logo.svg.png", alt="THK Image", width= '191px', height= '103px')
+    div(id="bar")
+        div(id="container")
+            img(src="/images/TH_Koeln_Logo.svg.png", alt="THK Image", id="th_image")
+            div(id="title") 
+                p(id="title_text") Transponder-Leihsystem
+            div(id="icons")
+                ul(id="icon_list")
+                    li(id="home")
+                        img(src="images/white-house-icon-png-5-transparent.png", alt="home_img")
+                    li(id="notif")
+                        img(src="images/kisspng-computer-icons-download-clip-art-notification-icon-5b46fd8375ada1.701012761531379075482.png", alt="notif_img")
+                    li(id="language")
+                        img(src="images/FAVPNG_dictionary-translation-english-language_cpuPshVb.png", alt="home_img")
