@@ -4,3 +4,5 @@ var router = express.Router();
 router.get('/home', function(req, res, next) {
     res.render('porter-home');
 });
+
+module.exports = router;

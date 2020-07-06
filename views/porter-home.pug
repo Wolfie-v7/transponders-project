@@ -1,5 +1,33 @@
 extends layout
 
 block content
-  h1= 'Pförtner'
-  p Welcome to Home
+  include header-bar.pug
+    link(rel='stylesheet', href='/stylesheets/home.css')
+    div(id='page-content')
+      div(id="menu")
+        ul(class="menu")
+          li(class="menu_elements", id='transponder')
+            a(href='')
+              b 
+                font(size="5") Transponder
+              br
+              img(src='/images/clipart1649631.png', alt='transponder', width='75px', height='75px', style="padding-top: 10px")
+          li(class="menu_elements",id='ausleihe', style="margin: 0 150px;")
+            a(href='')
+              b
+                font(size="5") Ausleihe
+              br
+              img(src='/images/Circle-icons-arrow-up.svg.png', , alt='ausleihe', width='75px', height='75px', style="padding-top: 10px")
+          li(class="menu_elements",id='abgabe')
+            a(href='')
+              b
+                font(size="5") Abgabe
+              br
+              img(src='/images/pngkey.com-circle-arrow-png-492765.png', alt='transponder', width='75px', height='75px', style="padding-top: 10px")
+        ul(class="menu")
+          li(class="menu_elements",id='logout', style="padding-left: 53px;")
+            a(href='')
+              b
+                font(size="5") Logout 
+              br
+              img(src='/images/primary-logout.png', alt='transponder', width='75px', height='75px', style="padding-top: 10px")

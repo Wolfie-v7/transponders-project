@@ -1,36 +1,30 @@
-ul{
+.menu {
+    padding: 0;
+    margin: 7% 20%;
     width: auto;
-    padding: 30px 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
 }
-#transponder{
-position: fixed;
-width: auto;
-height: 123px;
-padding:20px 0;
-left: 345px;
-top: 267px;
+
+.menu_elements {
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
-#ausleihe{
-position: fixed;
-width: auto;
-padding: 20px 0;
-height: 123px;
-left: 648px;
-top: 267px;
+
+#menu {
+    padding: 170px 0;
 }
-#abgabe{
-position: fixed;
-width: auto;
-padding: 20px 0;
-height: 123px;
-left: 866px;
-top: 267px;
+
+#page_content {
+    padding: 0;
+    margin: 0;
 }
-#logout{
-position: fixed;
-width: auto;
-padding: 20px 0;
-height: 130px;
-left: 655px;
-top: 448px;
+
+a {
+    color: inherit;
+    font-style: inherit;
+    text-decoration: none;
 }
