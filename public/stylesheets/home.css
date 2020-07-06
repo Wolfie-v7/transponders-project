@@ -1,0 +1,36 @@
+ul{
+    width: auto;
+    padding: 30px 0;
+}
+#transponder{
+position: fixed;
+width: auto;
+height: 123px;
+padding:20px 0;
+left: 345px;
+top: 267px;
+}
+#ausleihe{
+position: fixed;
+width: auto;
+padding: 20px 0;
+height: 123px;
+left: 648px;
+top: 267px;
+}
+#abgabe{
+position: fixed;
+width: auto;
+padding: 20px 0;
+height: 123px;
+left: 866px;
+top: 267px;
+}
+#logout{
+position: fixed;
+width: auto;
+padding: 20px 0;
+height: 130px;
+left: 655px;
+top: 448px;
+}

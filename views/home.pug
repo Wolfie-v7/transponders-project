@@ -2,19 +2,34 @@ extends layout
 
 block content
     include header-bar.pug
-    link(rel='stylesheet', href='/stylesheets/')
+    link(rel='stylesheet', href='/stylesheets/home.css')
     h1= home
     p there is no place like home
-    div(class="menu")
-        | Transponder
-        br
-        img(src="/images/", alt="transponder", width= '191px', height= '103px')
-        | Ausleihe
-        br
-        img(src="/images/", alt="THK Image", width= '191px', height= '103px')
-        | Abgabe 
-        br
-        img(src="/images/", alt="THK Image", width= '191px', height= '103px')
-        | Logout
-        br
-        img(src="/image", alt="THK Image", width= '191px', height= '103px')
+    div(id='menu')
+     ul
+        li(id='transponder')
+            b 
+                font(size="5") Transponder
+            br
+            a(href='')
+                img(src='/images/', ,='', alt='transponder', width='191px', height='103px')
+        li(id='ausleihe')
+            b
+                font(size="5") Ausleihe
+            br
+            a(href='')
+                img(src='/images/', ,='', alt='ausleihe', width='191px', height='103px')
+        li(id='abgabe')
+            b
+                font(size="5") Abgabe
+            br
+            a(href='')
+                img(src='/images/', ,='', alt='transponder', width='191px', height='103px')
+     ul
+        li(id='logout')
+            b
+                font(size="5") logout 
+            br
+            a(href='')
+                img(src='/images/', ,='', alt='transponder', width='191px', height='103px')
+
