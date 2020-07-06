@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var user = {username: "Tobias", password: "12345"};
+var user = {username: "tobias", password: "12345"};
 
 router.get('/', (req, res, next) => {
     res.render('login');
