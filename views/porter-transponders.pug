@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  include header-bar.pug
+  link(rel='stylesheet', href='/stylesheets/')
+  p Transponders
+  form(name="filterFrom", action="/admin/products", method="get")
+        select(name="filter") Filter
+            option(value="all") Alle
+            option(value="hero") Ausgeliehen
+            option(value="skin") Skins
+            option(value="icon") Icons
+            option(value="splashart") Art
+        button(type="submit") Apply
+  img(src='/images/', alt='ausdrucken', width='75px', height='75px')
+  table(id='transponders_table', border='2', width='700px')
+        tr
+            th Transponder-Nr
+            th Raum-Nr
+            th Status
+            th Leihdatum
+            th Verlauf
+        each row in list
+            tr
+                td=row.Transponder-Nr
+                td=row.Raum-Nr
+                td=row.Status
+                td=row.Leihdatum
+                td=row.Verlauf
