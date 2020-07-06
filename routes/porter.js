@@ -5,7 +5,7 @@ const status = {
     AVAILABLE: 'Verfügbar',
     RENTED: 'Ausgeliehen'
 }
-const list = [
+const transponders = [
     {
         transponderNr: 1,
         roomNr: '1.100',
@@ -91,7 +91,7 @@ router.get('/home', function(req, res, next) {
 });
 
 router.get('/transponders', function(req, res, next) {
-    res.render('porter-transponders');
+    res.render('porter-transponders', {list: transponders});
 });
 
 
