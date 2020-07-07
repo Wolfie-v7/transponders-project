@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  include header-bar.pug
+  link(rel='stylesheet', href='/stylesheets/transponderRent.css')
+  div(id='page-content')
+    div#page_title
+        | Ausleihe
+    div#page_options
+        | Matrikel-Nr
+        form(action="/porter/rent", method="get")
+            label#search_label(for="search_bar")
+                input#search_bar(type="search", name="search")
+                button#search_button(type="submit", value="")
+        form(action='')
+          input(type='submit', value='Daten eingeben')
+    div#page-items
+     div#table_wrapper
+        | Zugelassene Transponders
+        table(id='allowedTransponders_table', border='2', width='700px')
+                thead
+                    tr(id="table_head_row")
+                        th Transponder-Nr
+                        th Raum-Nr
+                        th Status
+                        th 
+                tbody
+                    each row in list 
+                        tr
+                            td=row.transponderNr
+                            td=row.roomNr
+                            td=row.status
+                            td(class="ausgeben")
+                                input(type='submit', value='Ausgeben')
+     div#personal_information
+      form
+        label(for='name') Name:
+        br
+        input#name(type='text', name='name')
+        br
+        label(for='matrikelNr') Matrikel-Nr:
+        br
+        input#matrikelNr(type='text', name='matrikelNr')
+        br
+        label(for='email') Email:
+        br
+        input#email(type='text', name='email')

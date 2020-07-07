@@ -39,6 +39,8 @@
     -moz-appearance: none;
     height: 75px;
     width: 192px;
+    min-width: 100px;
+    min-height: 50px;
     padding-left: 20px;
     text-align: center;
     font-family: Noto Sans Thai;
@@ -68,6 +70,8 @@
     background-color: #858585;
     width: 100px;
     height: 50px;
+    min-width: 100px;
+    min-height: 50px;
     margin: 0 10px;
     cursor: pointer;
 }
@@ -88,6 +92,8 @@ label {
     appearance: none;
     width: 200px;
     height: 50px;
+    min-width: 100px;
+    min-height: 50px;
     text-indent: 10px;
     margin: 0 20px;
 
@@ -110,7 +116,7 @@ label {
     position: relative;
     padding: 0px 10px;
     top: 50px;
-    min-height: 400px;
+    min-height: 300px;
     max-height: 500px;
     height: auto;
     overflow-y: auto;

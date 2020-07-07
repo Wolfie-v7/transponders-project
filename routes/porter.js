@@ -86,6 +86,23 @@ const transponders = [
         rentingDate: '17.03.2020'
     }
 ]
+const allowedTransponders = [
+    {
+        transponderNr: 1,
+        roomNr: '1.100',
+        status: status.AVAILABLE,
+    },
+    {
+        transponderNr: 2,
+        roomNr: '1.101',
+        status: status.AVAILABLE,
+    },
+    {
+        transponderNr: 2,
+        roomNr: '1.101',
+        status: status.AVAILABLE,
+    }
+]
 
 const students = []
 
@@ -132,6 +149,11 @@ router.get('/transponders', function(req, res, next) {
         }
     }
     return res.render('porter-transponders', {list: transponders});
+});
+
+router.get('/rent', function(req, res, next) {
+    console.log({list: allowedTransponders});
+    return res.render('porter-rent', {list: allowedTransponders});
 });
 
 
