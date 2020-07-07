@@ -6,6 +6,7 @@
     left: 0px;
     background: #50669D;
     mix-blend-mode: normal;
+    z-index: 10;
 }
 
 #container {
