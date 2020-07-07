@@ -4,27 +4,38 @@ block content
   include header-bar.pug
   link(rel='stylesheet', href='/stylesheets/transpondersList.css')
   div(id="page-content")
-    p Transponders
-    form(name="filterForm", action="/porter/transponders", method="get")
-            select(name="filter") Filter
-                option(value="all") Alle
-                option(value="rented") Ausgeliehen
-                option(value="available") Verfügbar
-            button(type="submit") Apply
-    img(src='/images/kisspng-computer-icons-printing-printer-paper-5b091e37a42688.0308692615273242156724.png', alt='print_icon', width='75px', height='75px')
-    table(id='transponders_table', border='2', width='700px')
-            tr
-                th Transponder-Nr
-                th Raum-Nr
-                th Status
-                th Leihdatum
-                th Verlauf
-            each row in list
-                tr
-                    td(style="text-align: center;")=row.transponderNr
-                    td(style="text-align: center;")=row.roomNr
-                    td(style="text-align: center;")=row.status
-                    td(style="text-align: center;")=row.rentingDate
-                    td(style="text-align: center;")
-                        a(href="")
-                            img(src="/images/info-icon-png-15.jpg", alt="history_button", width='25px', height='25px')
+    div#page_title
+        | Transponders
+    div#page_options
+        form(action="/porter/transponders", method="get")
+            label#search_label(for="search_bar")
+                input#search_bar(type="search", name="search")
+                button#search_button(type="submit", value="")
+        img#print_icon(src='/images/kisspng-computer-icons-printing-printer-paper-5b091e37a42688.0308692615273242156724.png', alt='print_icon', width='50px', height='50px', style="cursor: pointer;")
+        form#filter(name="filterForm", action="/porter/transponders", method="get")
+            label 
+                p Filter:
+                select#filter_dropdown(name="filter") Filter
+                    option(value="all") Alle
+                    option(value="rented") Ausgeliehen
+                    option(value="available") Verfügbar
+                button(type="submit") Apply
+    div#table_wrapper
+        table(id='transponders_table', border='2', width='700px')
+                thead
+                    tr(id="table_head_row")
+                        th Transponder-Nr
+                        th Raum-Nr
+                        th Status
+                        th Leihdatum
+                        th Verlauf
+                tbody
+                    each row in list allowed_transponders
+                        tr
+                            td=row.transponderNr
+                            td=row.roomNr
+                            td=row.status
+                            td=row.rentingDate
+                            td(class="information_cell")
+                                a(href="")
+                                    img(src="/images/info-icon-png-15.jpg", alt="history_button", width='25px', height='25px')

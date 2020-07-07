@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const url = require('url')
+const url = require('url');
 
 const status = {
     AVAILABLE: 'Verfügbar',
@@ -93,6 +93,12 @@ router.get('/home', function(req, res, next) {
 
 router.get('/transponders', function(req, res, next) {
     const filter = url.parse(req.url, true).query.filter
+    const search = url.parse(req.url, true).query.search
+
+    if(search) {
+        return res.render('porter-transponders', {list: transponders.filter((tr)=>{return tr.roomNr == search | tr.transponderNr.toString() == search})})
+    }
+
     if(filter) {
         switch(filter) {
             case "all": return res.render('porter-transponders', {list: transponders});

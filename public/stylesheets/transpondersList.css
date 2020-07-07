@@ -1,0 +1,171 @@
+#page_title {
+    justify-content: right;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-family: Lora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 123px;
+    color: #50669D;
+
+}
+
+
+#page_options {
+    position: relative;
+    width: auto;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 10px 50px;
+}
+
+
+#filter{
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    margin-left: auto;
+    padding-right: 10px;
+    
+}
+
+#filter select {
+    appearance: none;
+    border: 1px solid #cccccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 75px;
+    width: 192px;
+    padding-left: 20px;
+    text-align: center;
+    font-family: Noto Sans Thai;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+#filter label p{
+    font-family: Noto Sans Thai;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+#filter button {
+    appearance: none;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #858585;
+    width: 100px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search_label {
+    margin: 0 20px;
+}
+
+#search_bar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 50px;
+    text-indent: 10px;
+    margin: 0 20px;
+
+}
+
+#search_button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("/images/PinClipart.com_free-clipart-icons_4851736.png") no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+#table_wrapper{
+    position: relative;
+    padding: 0 10px;
+    top: 150px;
+    height: 450px;
+    overflow-y: auto;
+    
+}
+
+thead tr th {
+    position: sticky;
+    top: 0;
+}
+
+#transponders_table {
+    width: 100%;
+    border: hidden;
+    position: sticky;
+    top: 0;
+    border-collapse: collapse;
+}
+
+
+thead {
+    position: sticky;
+    top: 0;
+    
+}
+
+th {
+    height: 77px;
+    background: #7c7c7c;
+    color: #ffffff;
+    font-family: Noto Sans Thai;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+    box-shadow: 0 4px 2px -1px rgba(0, 0, 0, 0.4), 0 0 0 blue, 0 0 0 red, 0 0 0 green;
+    position: sticky;
+}
+
+
+#tbody_wrapper {
+    position: sticky;
+    top: 0;
+    height: 300px;
+}
+
+tbody {
+    width: 100%;
+    
+}
+
+td {
+    padding-inline-start: 10px;
+    height: 77px;
+}
+
+.information_cell {
+    align-items: center;
+}
