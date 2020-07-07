@@ -87,6 +87,8 @@ const transponders = [
     }
 ]
 
+const students = []
+
 router.get('/home', function(req, res, next) {
     res.render('porter-home');
 });
@@ -97,7 +99,17 @@ router.get('/rent', function(req, res, next) {
 
 router.post('/rent', function(req, res, next) {
     if(!req.body.mat_nr) return res.redirect('/porter/rent');
+    switch (req.body.mat_nr) {
+        case 11134565:
+            
+            break;
+        case 11257632:
+        
+            break;
     
+        default:
+            break;
+    }
 });
 
 
