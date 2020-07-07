@@ -91,6 +91,19 @@ router.get('/home', function(req, res, next) {
     res.render('porter-home');
 });
 
+router.get('/rent', function(req, res, next) {
+    return res.render('porter-rent');
+});
+
+router.post('/rent', function(req, res, next) {
+    if(!req.body.mat_nr) return res.redirect('/porter/rent');
+    
+});
+
+
+
+
+
 router.get('/transponders', function(req, res, next) {
     const filter = url.parse(req.url, true).query.filter
     const search = url.parse(req.url, true).query.search
