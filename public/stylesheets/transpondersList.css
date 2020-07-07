@@ -6,7 +6,7 @@
     font-family: Lora;
     font-style: normal;
     font-weight: bold;
-    font-size: 96px;
+    font-size: 72px;
     line-height: 123px;
     color: #50669D;
 
@@ -108,9 +108,11 @@ label {
 
 #table_wrapper{
     position: relative;
-    padding: 0 10px;
-    top: 150px;
-    height: 450px;
+    padding: 0px 10px;
+    top: 50px;
+    min-height: 400px;
+    max-height: 500px;
+    height: auto;
     overflow-y: auto;
     
 }
