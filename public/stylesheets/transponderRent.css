@@ -1,0 +1,75 @@
+#page_title {
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-family: Lora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 123px;
+    color: #50669D;
+}
+#page_options {
+    position: relative;
+    width: auto;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 30px 50px;
+}
+#search_bar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 50px;
+    min-width: 100px;
+    min-height: 50px;
+    text-indent: 10px;
+    margin: 0 20px;
+
+}
+
+#search_button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("/images/PinClipart.com_free-clipart-icons_4851736.png") no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 0 20px;
+}
+#daten{
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    margin-left: auto;
+    padding-right: 10px;
+    
+}
+#button{
+    background-color: #50669D;
+    cursor: pointer;
+    appearance: none;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 150px;
+    height: 50px;
+    margin: 0 10px;
+    padding: 10px o;
+}
+p{
+    font-family: Noto Sans Thai;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 10px;
+    display: inline-block;
+}

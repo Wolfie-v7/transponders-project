@@ -7,13 +7,13 @@ block content
     div#page_title
         | Ausleihe
     div#page_options
-        | Matrikel-Nr
+        p Matrikel-Nr
         form(action="/porter/rent", method="get")
             label#search_label(for="search_bar")
                 input#search_bar(type="search", name="search")
                 button#search_button(type="submit", value="")
-        form(action='')
-          input(type='submit', value='Daten eingeben')
+        form#daten(action='')
+          input#button(type='submit', value='Daten eingeben')
     div#page-items
      div#table_wrapper
         | Zugelassene Transponders
