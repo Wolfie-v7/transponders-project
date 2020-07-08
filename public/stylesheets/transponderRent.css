@@ -72,7 +72,7 @@
     color: white;
     cursor: pointer;
     appearance: none;
-    border: 1px solid #000000;
+    border: 0px;
     border-radius: 5px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -80,6 +80,10 @@
     height: 50px;
     margin: 0 10px;
     padding: 10px o;
+    font-family: Noto Sans Thai;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
 }
 p{
     font-family: Noto Sans Thai;
@@ -100,26 +104,92 @@ p{
 #personal_information{
     min-width: 400px;
     border-right: 2px solid #50669D ;
+    margin-bottom: 20px;
+    
 }
 
 #personal_information p {
     line-height: 50px;
     width: 350px;
-    background-color: #383737;
-    color: #ffffff;
+    background-color: #C4C4C4;
+    color: #000000;
     text-indent: 15px;
+    margin-bottom: 20px;
     
 }
+#info_form{
+    margin-left:10px;  
+}
+#info_form label{
+    padding:30px 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: Noto Sans Thai;
+    font-style: normal;
+    font-weight: normal;
 
+}
 #table_wrapper {
     margin-left: auto;
     width: 100%;
     padding: 0 30px;
+}
+#tabel_wrapper p{
+    font-family: Noto Sans Thai;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+#border_transponder {
+    width: 98%;
+    height: 7%;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
 }
 
 #allowedTransponders_table {
     padding: 0;
     margin: 0;
     width: inherit;
+    border: hidden;
+    position: sticky;
+    top: 0;
+    border-collapse: collapse;
 }
+
+
+th {
+    height: 60px;
+    background: #ffffff;
+    color: #000000;
+    font-family: Noto Sans Thai;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+    position: sticky;
+}
+
+td {
+    padding-inline-start: 10px;
+    height: 60px;
+}
+#rent_button:enabled{
+    background: #50669D;
+    border-radius: 5px;
+    font-family: Noto Sans Thai;
+    font-size: 13px;
+    line-height: 22px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: 0px ;
+
+
+}
+
 

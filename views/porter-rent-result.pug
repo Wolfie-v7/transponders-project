@@ -17,7 +17,7 @@ block content
             input#button(type='submit', value='Daten eingeben')
     div#page_items
         div#personal_information
-            form
+            form#info_form
                 label(for='name') Name:
                 br
                 p#name(type='text', name='name') #{result.name + ' ' + result.surname}
@@ -29,8 +29,9 @@ block content
                 label(for='email') Email:
                 br
                 p#email(type='text', name='email') #{result.email}
-        div#table_wrapper
-            | Zugelassene Transponders
+        div#table_wrapper   
+            p Zugelassene Transponders 
+            div#border_transponder
             table#allowedTransponders_table(border='2', width='700px')
                     thead
                         tr(id="table_head_row")
