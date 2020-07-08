@@ -7,14 +7,15 @@ block content
     div#page_title
         | Ausleihe
     div#page_options
-        p Matrikel-Nr
-        form(action="/porter/rent", method="GET")
-            label#search_label(for="search_bar")
-                input#search_bar(type="search", name="search")
-                button#search_button(type="submit", value="")
-        form#daten(action='')
-          input#button(type='submit', value='Daten eingeben')
-    div#page-items
+        div#border
+            p Matrikel-Nr
+            form(action="/porter/rent", method="GET")
+                label#search_label(for="search_bar")
+                    input#search_bar(type="search", name="search")
+                    button#search_button(type="submit", value="")
+            form#daten(action='')
+            input#button(type='submit', value='Daten eingeben')
+    div#page_items
         div#personal_information
             form
                 label(for='name') Name:
@@ -30,7 +31,7 @@ block content
                 p#email(type='text', name='email') #{result.email}
         div#table_wrapper
             | Zugelassene Transponders
-            table(id='allowedTransponders_table', border='2', width='700px')
+            table#allowedTransponders_table(border='2', width='700px')
                     thead
                         tr(id="table_head_row")
                             th Transponder-Nr

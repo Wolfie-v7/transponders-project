@@ -5,12 +5,13 @@ block content
   link(rel='stylesheet', href='/stylesheets/transponderRent.css')
   div(id='page-content')
     div#page_title
-        | Ausleih
+        | Ausleihe
     div#page_options
-        p Matrikel-Nr
-        form(action="/porter/rent", method="GET")
-            label#search_label(for="search_bar")
-                input#search_bar(type="search", name="search")
-                button#search_button(type="submit", value="")
-        form#daten(action='')
-          input#button(type='submit', value='Daten eingeben')
+        div#border
+          p Matrikel-Nr
+          form(action="/porter/rent", method="GET")
+              label#search_label(for="search_bar")
+                  input#search_bar(type="search", name="search")
+                  button#search_button(type="submit", value="")
+          form#daten(action='')
+            input#button(type='submit', value='Daten eingeben')
