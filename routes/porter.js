@@ -86,33 +86,46 @@ const transponders = [
         rentingDate: '17.03.2020'
     }
 ]
-const allowedTransponders = [
-    {
-        transponderNr: 1,
-        roomNr: '1.100',
-        status: status.AVAILABLE,
-    },
-    {
-        transponderNr: 2,
-        roomNr: '1.101',
-        status: status.AVAILABLE,
-    },
-    {
-        transponderNr: 2,
-        roomNr: '1.101',
-        status: status.AVAILABLE,
-    }
-]
 
-const students = []
+const students = [
+    {
+        name: 'Sam',
+        surname: 'Fischer',
+        email: 's.fischer@smail_thkoeln.de',
+        matNr: 11457235,
+        allowedTransponders: [transponders.find(tr => tr.transponderNr == 13), transponders.find(tr => tr.transponderNr == 11)],
+    },
+
+    {
+        name: 'Sommer',
+        surname: 'Böhm',
+        email: 's.boehm@smail_thkoeln.de',
+        matNr: 12389457,
+        allowedTransponders: [],
+    },
+];
 
 router.get('/home', function(req, res, next) {
     res.render('porter-home');
 });
 
+router.get('/rent', function(req, res, next) {
+    const search = url.parse(req.url, true).query.search
+    console.log(search);
+    const student = students.find((student) => {
+        return student.matNr == search;
+    });
+    if(!student | !search) return res.render("porter-rent");
+    return res.render('porter-rent-result', {result: student});
+});
 
-
-
+router.post('/rent', function(req, res, next) {
+    console.log(req.body);
+    const transponder = req.body.transponderNr;
+    transponders.find(tr => tr.transponderNr == transponder).status = status.RENTED;
+    res.redirect("back");
+    
+});
 
 
 
@@ -126,19 +139,13 @@ router.get('/transponders', function(req, res, next) {
 
     if(filter) {
         switch(filter) {
-            case "all": return res.render('porter-transponders', {list: transponders});
-            case "available": return res.render('porter-transponders', {list: transponders.filter((tr) => {return tr.status == status.AVAILABLE})});
-            case "rented": return res.render('porter-transponders', {list: transponders.filter((tr) => {return tr.status == status.RENTED})});
+            case "all": return res.render('porter-transponders', {list: transponders, filter: "all"});
+            case "available": return res.render('porter-transponders', {list: transponders.filter((tr) => {return tr.status == status.AVAILABLE}), filter: "available"});
+            case "rented": return res.render('porter-transponders', {list: transponders.filter((tr) => {return tr.status == status.RENTED}), filter: "rented"});
         }
     }
     return res.render('porter-transponders', {list: transponders});
 });
-
-router.get('/rent', function(req, res, next) {
-    console.log({list: allowedTransponders});
-    return res.render('porter-rent', {list: allowedTransponders});
-});
-
 
 
 module.exports = router;

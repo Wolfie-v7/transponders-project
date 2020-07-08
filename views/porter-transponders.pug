@@ -16,9 +16,9 @@ block content
             label 
                 p Filter:
                 select#filter_dropdown(name="filter") Filter
-                    option(value="all") Alle
-                    option(value="rented") Ausgeliehen
-                    option(value="available") Verfügbar
+                    option(value="all", selected = filter == "all") Alle
+                    option(value="rented", selected = filter == "rented") Ausgeliehen
+                    option(value="available", selected = filter == "available") Verfügbar
                 button(type="submit") Apply
     div#table_wrapper
         table(id='transponders_table', border='2', width='700px')
