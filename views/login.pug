@@ -6,24 +6,28 @@ block content
     div(id="page_content")
         p#welcome_text Herzlich wilkommen beim Transponder-Leihsystem der TH Köln
         div#form(name="form")
-            form(action='/login' method="POST")
-                label Benutzername*
-                br
-                input(type='text' name='username')
-                br
-                label Passwort*
-                br
-                input(type='password' name='password')
-                br
-                input(type='submit' value='anmelden')
-                br
-                p * Erforderliche Angabe
-        div(class="info")
-            div(class="text")
-                | Service-Desk
-                br
-                | Mo - Fr 08:00 - 18:00 Uhr
-                br
-                | Samstag 10:00 - 14:00 Uhr
-                br
-                | E-Mail: support@campus-it.th-koeln.de
+            div#form_wrapper
+                form(action='/login' method="POST")
+                    label Benutzername*
+                    br
+                    div(class='input_wrapper')
+                        input(type='text' name='username')
+                    br
+                    label Passwort*
+                    br
+                    div(class='input_wrapper')
+                        input(type='password' name='password')
+                    br
+                    div#button_wrapper
+                        button#submit_button(type='submit' value='anmelden') anmelden
+                    br
+                    p * Erforderliche Angabe
+            div(class="info")
+                div(class="text")
+                    | Service-Desk
+                    br
+                    | Mo - Fr 08:00 - 18:00 Uhr
+                    br
+                    | Samstag 10:00 - 14:00 Uhr
+                    br
+                    | E-Mail: support@campus-it.th-koeln.de
