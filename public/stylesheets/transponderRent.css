@@ -182,14 +182,30 @@ td {
 #rent_button:enabled{
     background: #50669D;
     border-radius: 5px;
-    font-family: Noto Sans Thai;
-    font-size: 13px;
+    font-family: 400 14px Arial;
+    font-size: 14px;
     line-height: 22px;
     color: #FFFFFF;
     cursor: pointer;
     border: 0px ;
 
 
+}
+
+.ausgeben {
+    /*display: inline-flex;*/
+    align-items: center;
+    width: auto;
+    justify-content: center;
+    border-top: none;
+    text-align: center;
+    
+}
+
+#allowedTransponders_table tbody td {
+    
+    border-left: inherit;
+    
 }
 
 

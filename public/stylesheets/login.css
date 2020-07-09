@@ -19,3 +19,39 @@
     color: #000000;
 
 }
+
+#page_content {
+    padding: 10px 20px;
+}
+
+#welcome_text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+#form {
+    display: flex;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+#form input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border:1px solid #0d5aa1;
+    background-color: #BFDAF3;
+    text-indent: 5px;
+    border-radius: 5px;
+
+}

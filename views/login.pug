@@ -4,8 +4,8 @@ block content
     include header-bar.pug
     link(rel='stylesheet', href='/stylesheets/login.css')
     div(id="page_content")
-        p herzlich wilkommen beim Transponder-Leihsystem der TH koeln
-        div(name="form")
+        p#welcome_text Herzlich wilkommen beim Transponder-Leihsystem der TH Köln
+        div#form(name="form")
             form(action='/login' method="POST")
                 label Benutzername*
                 br
@@ -14,8 +14,10 @@ block content
                 label Passwort*
                 br
                 input(type='password' name='password')
+                br
                 input(type='submit' value='anmelden')
-            p * Erforderliche Angabe
+                br
+                p * Erforderliche Angabe
         div(class="info")
             div(class="text")
                 | Service-Desk
