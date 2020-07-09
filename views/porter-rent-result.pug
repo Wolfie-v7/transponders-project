@@ -34,22 +34,25 @@ block content
         div#table_wrapper   
             p Zugelassene Transponder 
             div#border_transponder
-            table#allowedTransponders_table(border='2', width='700px')
-                    thead
-                        tr(id="table_head_row")
-                            th Transponder-Nr
-                            th Raum-Nr
-                            th Status
-                            th 
-                    tbody
-                        each row in result.allowedTransponders
-                            tr
-                                form(action="/porter/rent", method="post")
-                                    input(type="hidden", name="transponderNr", value = row.transponderNr)
-                                    td=row.transponderNr
-                                    input(type="hidden", name="roomNr", value = row.roomNr)
-                                    td=row.roomNr
-                                    input(type="hidden", name="status", value = row.status)
-                                    td=row.status
-                                    td(class="ausgeben")
-                                        input#rent_button(type='submit', value='Ausgeben', disabled = row.status == 'Ausgeliehen')
+            if empty === false
+                table#allowedTransponders_table(border='2', width='700px')
+                        thead
+                            tr(id="table_head_row")
+                                th Transponder-Nr
+                                th Raum-Nr
+                                th Status
+                                th 
+                        tbody
+                            each row in result.allowedTransponders
+                                tr
+                                    form(action="/porter/rent", method="post")
+                                        input(type="hidden", name="transponderNr", value = row.transponderNr)
+                                        td=row.transponderNr
+                                        input(type="hidden", name="roomNr", value = row.roomNr)
+                                        td=row.roomNr
+                                        input(type="hidden", name="status", value = row.status)
+                                        td=row.status
+                                        td(class="ausgeben")
+                                            input#rent_button(type='submit', value='Ausgeben', disabled = row.status == 'Ausgeliehen')
+            else
+                p Keine zugelassene Transponder

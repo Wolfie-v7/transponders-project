@@ -116,7 +116,8 @@ router.get('/rent', function(req, res, next) {
         return student.matNr == search;
     });
     if(!student | !search) return res.render("porter-rent");
-    return res.render('porter-rent-result', {result: student});
+    const empty = student.allowedTransponders.length == 0;
+    return res.render('porter-rent-result', {result: student, empty: empty});
 });
 
 router.post('/rent', function(req, res, next) {
