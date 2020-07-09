@@ -3,7 +3,7 @@
 
 Run ```npm install``` to install all required dependencies.
 
-To test the prototype type the command ```npm run start``` to start the server then go to *http://localhost:3001/login* in your browser.
+To test the prototype type the command ```npm run start``` in the terminal to start the server then go to *http://localhost:3001/login* in your browser.
 Please use the dummy account:
 
 Username: **tobias** |
