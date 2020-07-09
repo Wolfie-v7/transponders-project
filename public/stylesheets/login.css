@@ -90,24 +90,34 @@
     justify-self: center;
     align-self: center;
     text-align: center;
+    vertical-align: middle;
     cursor: pointer;
 }
+
+#submit_button p {
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
 
 #submit_button:focus {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border: 1px solid #1f3877;
-    background-color: #50669D;
+    background-color: #7089c8;
     color: white;
     font-size: 20px;
-    font-family: cursive;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 5px;
     transition: 0.2s;
-    width: 60px;
-    height: 30px;
+    width: 100px;
+    height: 40px;
     margin: 0;
     justify-self: center;
+    align-self: center;
+    text-align: center;
+    vertical-align: middle !important;
     outline: none;
 }
 
